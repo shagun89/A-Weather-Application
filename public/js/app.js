@@ -10,7 +10,7 @@ const paratwo = document.querySelector('#msg-2')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    const url = 'http://localhost:3000/weather?search=' + search.value
+    const url = '/weather?search=' + search.value
     paraone.textContent = "The weather forecast for " + search.value + " is loading.... "
     fetch(url).then((response) => {
     response.json().then((data) => {
